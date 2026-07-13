@@ -1,0 +1,65 @@
+// This is your Prisma schema file
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String
+  name      String?
+  role      String   @default("STUDENT") // ADMIN, STUDENT, RECRUITER, FACULTY
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Course {
+  id           String    @id @default(uuid())
+  title        String
+  category     String
+  duration     String
+  overview     String
+  syllabus     String
+  fees         String
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  inquiries    Inquiry[]
+}
+
+model Inquiry {
+  id        String   @id @default(uuid())
+  name      String
+  email     String
+  phone     String
+  message   String
+  status    String   @default("PENDING") // PENDING, CONTACTED, CONVERTED
+  courseId  String?
+  course    Course?  @relation(fields: [courseId], references: [id])
+  createdAt DateTime @default(now())
+}
+
+model Event {
+  id        String   @id @default(uuid())
+  title     String
+  date      DateTime
+  type      String   // WORKSHOP, VISIT, CONVOCATION
+  imageUrl  String?
+  createdAt DateTime @default(now())
+}
+
+model Blog {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  content     String
+  author      String
+  publishedAt DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
