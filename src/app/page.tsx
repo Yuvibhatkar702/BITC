@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, BookOpen, Building2, CheckCircle2, GraduationCap, Users, Briefcase, Star, Search, ChevronLeft, ChevronRight, PlayCircle, Shield, Clock, Award, TrendingUp, Sparkles, Target, Trophy, Monitor, Compass, UserCheck, Network } from "lucide-react";
+import { ArrowRight, BookOpen, Building2, CheckCircle2, GraduationCap, Users, Briefcase, Star, Search, ChevronLeft, ChevronRight, PlayCircle, Shield, Clock, Award, TrendingUp, Sparkles, Target, Trophy, Monitor, Compass, UserCheck, Network, Code } from "lucide-react";
 import FeaturedCertifications from "@/components/FeaturedCertifications";
 export default function Home() {
   return (
@@ -129,7 +129,7 @@ export default function Home() {
       </section>
 
       {/* 3. Why Choose BITC */}
-      <section className="py-12 md:py-20 bg-gray-50/50">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-dark mb-4">Why Choose BITC?</h2>
@@ -195,7 +195,7 @@ export default function Home() {
       </section>
 
       {/* 4. Featured Certifications */}
-      <section className="py-12 md:py-20 bg-gray-50">
+      <section className="py-12 md:py-20 bg-white">
         <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-10">
             <div>
@@ -211,62 +211,120 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Internship Programs */}
-      <section className="py-12 md:py-16 bg-white">
+      {/* 5. Learning Process */}
+      <section className="py-12 md:py-20 bg-primary/5">
         <div className="container max-w-[1400px] mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-slate-dark mb-2">Internship Programs</h2>
-            <p className="text-gray-500 text-[15px] max-w-2xl">Gain practical experience with our structured internship opportunities.</p>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-dark mb-4">Learning Process</h2>
+            <p className="text-gray-500 text-[16px]">Your step-by-step journey from enrollment to placement.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-             <Card className="bg-primary/5 border-primary/10">
-                <CardContent className="p-6">
-                  <Briefcase className="h-7 w-7 text-primary mb-4" />
-                  <h3 className="text-[18px] font-bold mb-2">Summer Internships</h3>
-                  <p className="text-[14px] text-gray-600 mb-4">Intensive 4-8 week programs during summer breaks for practical exposure.</p>
-                  <Link href="/internships/summer" className="text-primary text-[14px] font-semibold hover:underline">Learn More →</Link>
-                </CardContent>
-             </Card>
-             <Card className="bg-primary/5 border-primary/10">
-                <CardContent className="p-6">
-                  <Briefcase className="h-7 w-7 text-primary mb-4" />
-                  <h3 className="text-[18px] font-bold mb-2">Industrial Internships</h3>
-                  <p className="text-[14px] text-gray-600 mb-4">6-month immersive training for final year students at partner companies.</p>
-                  <Link href="/internships/industrial" className="text-primary text-[14px] font-semibold hover:underline">Learn More →</Link>
-                </CardContent>
-             </Card>
-             <Card className="bg-primary/5 border-primary/10">
-                <CardContent className="p-6">
-                  <Briefcase className="h-7 w-7 text-primary mb-4" />
-                  <h3 className="text-[18px] font-bold mb-2">Winter Internships</h3>
-                  <p className="text-[14px] text-gray-600 mb-4">Short-term projects and skill development during winter vacations.</p>
-                  <Link href="/internships/winter" className="text-primary text-[14px] font-semibold hover:underline">Learn More →</Link>
-                </CardContent>
-             </Card>
+          
+          <div className="relative max-w-6xl mx-auto px-4">
+            {/* Horizontal Line for Desktop */}
+            <div className="hidden md:block absolute top-8 left-16 right-16 h-0.5 bg-primary/20 -z-0" />
+
+            <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-2 md:gap-0 relative z-10">
+              {[
+                { title: "Enroll", icon: Users },
+                { title: "Learn", icon: BookOpen },
+                { title: "Practice", icon: Code },
+                { title: "Live Project", icon: Briefcase },
+                { title: "Internship", icon: Target },
+                { title: "Certification", icon: Award },
+                { title: "Placement", icon: Trophy }
+              ].map((step, i, arr) => (
+                <div key={i} className="flex flex-col items-center relative w-full md:w-32 group cursor-pointer">
+                  <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-4 border-gray-100 shadow-sm text-primary mb-4 group-hover:border-primary/30 group-hover:bg-primary/5 group-hover:scale-110 transition-all duration-300 relative z-10">
+                    <step.icon className="w-6 h-6 text-gray-400 group-hover:text-primary transition-colors" />
+                  </div>
+                  
+                  <span className="font-semibold text-slate-800 text-[14px] text-center mb-2 md:mb-0 group-hover:text-primary transition-colors">
+                    {step.title}
+                  </span>
+
+                  {/* Vertical Arrow for Mobile */}
+                  {i < arr.length - 1 && (
+                    <div className="md:hidden text-gray-300 my-2">
+                       <ArrowRight className="w-6 h-6 rotate-90" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 6. Corporate Training */}
-      <section className="py-12 md:py-16 bg-slate-dark text-white">
-        <div className="container max-w-[1400px] mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4">Corporate Training & Upskilling</h2>
-            <p className="text-gray-300 mb-6 text-[15px] max-w-lg">
-              Tailor-made training programs designed to enhance the skills of your workforce. We partner with organizations to deliver cutting-edge technical and management training.
-            </p>
-            <ul className="space-y-3 mb-8 text-[14px]">
-              <li className="flex items-center"><CheckCircle2 className="h-5 w-5 mr-3 text-primary" /> Customized Curriculum Design</li>
-              <li className="flex items-center"><CheckCircle2 className="h-5 w-5 mr-3 text-primary" /> On-premise and Online Options</li>
-              <li className="flex items-center"><CheckCircle2 className="h-5 w-5 mr-3 text-primary" /> Expert Industry Instructors</li>
-            </ul>
-            <Link href="/corporate" className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-[14px] font-semibold text-white hover:bg-primary/90">
-              Explore Corporate Programs
-            </Link>
+      {/* 6. Renowned Faculty */}
+      <section className="py-12 md:py-16 bg-gray-50 border-t border-gray-100">
+        <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-dark mb-2">Master your craft with renowned faculty</h2>
+            <p className="text-[15px] text-gray-500 font-medium">Instructors</p>
+            <div className="h-1 w-16 bg-primary mt-4 rounded-full"></div>
           </div>
-          <div className="bg-white/5 rounded-2xl h-64 border border-white/10 flex items-center justify-center relative overflow-hidden">
-             <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent" />
-             <Building2 className="h-20 w-20 text-white/30" />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: "Pramanth Raj Sinha",
+                role: "Founder & Trustee",
+                company: "Ashoka University",
+                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400&h=400",
+                bio: "Former McKinsey Partner, Co-Founder & Trustee of Ashoka University, and PhD holder in Mechanical Engineering.",
+                linkedin: "#"
+              },
+              {
+                name: "Prasad Kantamneni",
+                role: "Founding Partner",
+                company: "UXReactor",
+                image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400",
+                bio: "Prasad Kantamneni, Founding Partner at UXReactor, is a designer and educator with expertise in UX design.",
+                linkedin: "#"
+              },
+              {
+                name: "Siddharth Deshmukh",
+                role: "Professor, MICA",
+                company: "MICA",
+                image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400&h=400",
+                bio: "Siddharth Deshmukh is an educator, consultant, and content creator with 25+ years of experience in digital.",
+                linkedin: "#"
+              },
+              {
+                name: "Dr. Anjali Sharma",
+                role: "Lead Data Scientist",
+                company: "Google",
+                image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400&h=400",
+                bio: "Expert in Artificial Intelligence and Machine Learning, with a decade of experience leading global data teams.",
+                linkedin: "#"
+              }
+            ].map((faculty, i) => (
+              <Card key={i} className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden bg-white group rounded-xl">
+                <div className="h-48 w-full bg-gray-100 relative overflow-hidden">
+                   <img src={faculty.image} alt={faculty.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                </div>
+                <CardContent className="p-5">
+                  <h3 className="text-lg font-bold text-slate-900 mb-1">{faculty.name}</h3>
+                  <p className="text-[14px] text-gray-500 mb-6">{faculty.role}</p>
+                  
+                  <div className="mb-4">
+                    <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">WORKING AT</span>
+                    <div className="flex items-center gap-2 mt-1.5">
+                       <Briefcase className="w-4 h-4 text-primary" />
+                       <p className="text-[14px] font-bold text-slate-700">{faculty.company}</p>
+                    </div>
+                  </div>
+                  
+                  <p className="text-[14px] text-gray-600 mb-6 leading-relaxed">
+                    {faculty.bio} <span className="font-semibold text-slate-900 cursor-pointer hover:text-primary transition-colors">...Read More</span>
+                  </p>
+                  
+                  <Link href={faculty.linkedin} className="inline-flex items-center text-primary font-semibold text-[14px] hover:underline">
+                     LinkedIn Profile <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
@@ -280,19 +338,19 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                 <div className="text-3xl md:text-4xl font-black text-primary mb-1">500+</div>
+                 <div className="text-2xl md:text-3xl font-black text-primary mb-1">10+</div>
                  <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Hiring Partners</div>
                </div>
                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                 <div className="text-3xl md:text-4xl font-black text-primary mb-1">10k+</div>
+                 <div className="text-2xl md:text-3xl font-black text-primary mb-1">1K+</div>
                  <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Students Placed</div>
                </div>
                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                 <div className="text-3xl md:text-4xl font-black text-primary mb-1">12 LPA</div>
+                 <div className="text-2xl md:text-3xl font-black text-primary mb-1">12 LPA</div>
                  <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Highest Package</div>
                </div>
                <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-                 <div className="text-3xl md:text-4xl font-black text-primary mb-1">95%</div>
+                 <div className="text-2xl md:text-3xl font-black text-primary mb-1">95%</div>
                  <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Placement Rate</div>
                </div>
             </div>
@@ -300,7 +358,7 @@ export default function Home() {
       </section>
 
       {/* 8. Student Success Stories */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-12 md:py-16 bg-white">
         <div className="container max-w-[1400px] mx-auto px-4">
           <div className="mb-10 text-center">
             <h2 className="text-3xl font-bold text-slate-dark mb-2">Student Success Stories</h2>
@@ -308,9 +366,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { name: "Rahul Sharma", role: "Software Engineer at TCS", quote: "The MERN stack course at BITC gave me the practical skills I needed to clear my interviews with ease." },
-              { name: "Priya Patel", role: "Data Analyst at Wipro", quote: "Excellent faculty and hands-on projects. The placement cell was very supportive throughout the process." },
-              { name: "Amit Kumar", role: "Automation Engineer at L&T", quote: "The industrial automation training was exactly what the industry demands right now." }
+              { name: "Rahul Sharma", role: "Software Engineer at TCS", quote: "The MERN stack course at BITC gave me the practical skills I needed to clear my interviews with ease.", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80" },
+              { name: "Priya Patel", role: "Data Analyst at Wipro", quote: "Excellent faculty and hands-on projects. The placement cell was very supportive throughout the process.", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80" },
+              { name: "Amit Kumar", role: "Automation Engineer at L&T", quote: "The industrial automation training was exactly what the industry demands right now.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" }
             ].map((story, i) => (
               <Card key={i} className="border-gray-200 bg-white">
                 <CardContent className="p-6">
@@ -318,74 +376,16 @@ export default function Home() {
                     {[1,2,3,4,5].map(s => <Star key={s} className="h-4 w-4 fill-current" />)}
                   </div>
                   <p className="text-gray-600 text-[14px] italic mb-5 leading-relaxed">"{story.quote}"</p>
-                  <div>
-                    <h4 className="font-bold text-slate-dark text-[15px]">{story.name}</h4>
-                    <p className="text-[13px] text-primary font-semibold">{story.role}</p>
+                  <div className="flex items-center gap-3">
+                    <img src={story.image} alt={story.name} className="w-10 h-10 rounded-full object-cover border border-gray-200" />
+                    <div>
+                      <h4 className="font-bold text-slate-dark text-[15px]">{story.name}</h4>
+                      <p className="text-[13px] text-primary font-semibold">{story.role}</p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 9. Industry Partners */}
-      <section className="py-12 bg-white border-y border-gray-100">
-         <div className="container max-w-[1400px] mx-auto px-4 text-center">
-            <h2 className="text-2xl font-bold text-slate-dark mb-8">Our Top Hiring Partners</h2>
-            <div className="flex flex-wrap justify-center gap-10 md:gap-16 opacity-60 grayscale">
-              <span className="text-2xl font-black">TECHMAHINDRA</span>
-              <span className="text-2xl font-black">TCS</span>
-              <span className="text-2xl font-black">WIPRO</span>
-              <span className="text-2xl font-black">INFOSYS</span>
-              <span className="text-2xl font-black">CAPGEMINI</span>
-            </div>
-         </div>
-      </section>
-
-      {/* 10. FAQs */}
-      <section className="py-12 md:py-16 bg-gray-50">
-        <div className="container max-w-[800px] mx-auto px-4">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-dark mb-2">Frequently Asked Questions</h2>
-          </div>
-          <Accordion className="w-full bg-white rounded-xl shadow-sm border p-2">
-            <AccordionItem value="item-1">
-              <AccordionTrigger className="px-4 font-semibold text-[15px]">Do you provide placement assistance?</AccordionTrigger>
-              <AccordionContent className="px-4 text-gray-600 text-[14px]">
-                Yes, BITC offers 100% placement assistance through our dedicated placement cell that partners with top IT and Engineering firms.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-2">
-              <AccordionTrigger className="px-4 font-semibold text-[15px]">Are the courses available online or offline?</AccordionTrigger>
-              <AccordionContent className="px-4 text-gray-600 text-[14px]">
-                We offer both hybrid learning models and fully offline campus training depending on the specific program you choose.
-              </AccordionContent>
-            </AccordionItem>
-            <AccordionItem value="item-3">
-              <AccordionTrigger className="px-4 font-semibold text-[15px]">Do I get a certificate after completion?</AccordionTrigger>
-              <AccordionContent className="px-4 text-gray-600 text-[14px]">
-                Yes, every successful completion grants a verifiable BITC Industry Certificate highly valued by our corporate partners.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
-        </div>
-      </section>
-
-      {/* 11. Contact CTA */}
-      <section className="py-16 bg-primary relative overflow-hidden">
-        <div className="container max-w-[1400px] mx-auto px-4 relative z-10 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-black mb-4 tracking-tight">Ready to Accelerate Your Career?</h2>
-          <p className="text-[16px] text-white/90 mb-8 max-w-2xl mx-auto font-light">
-            Take the first step towards a successful career. Apply now and get guidance from our academic counselors.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/admissions" className="inline-flex h-11 items-center justify-center rounded-lg bg-white px-8 text-[14px] font-bold text-primary hover:bg-gray-100 shadow-sm transition-colors">
-              Apply For Admission
-            </Link>
-            <Link href="/contact" className="inline-flex h-11 items-center justify-center rounded-lg border border-white px-8 text-[14px] font-bold text-white hover:bg-white hover:text-primary transition-colors">
-              Contact Us
-            </Link>
           </div>
         </div>
       </section>
