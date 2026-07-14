@@ -226,7 +226,7 @@ export function Navbar() {
 
         {/* Right Section: Sign Up */}
         <div className="flex items-center ml-auto">
-          <Link href="/login" className="inline-flex h-[38px] items-center justify-center rounded-md bg-primary px-6 text-[14px] font-semibold text-white hover:bg-primary/90 transition-colors">
+          <Link href="/login" className="inline-flex h-[38px] items-center justify-center rounded-md bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] hover:bg-[linear-gradient(to_right,#ff9900_0%,#ffcc00_100%)] px-6 text-[14px] font-semibold text-white transition-colors">
             Sign Up
           </Link>
         </div>

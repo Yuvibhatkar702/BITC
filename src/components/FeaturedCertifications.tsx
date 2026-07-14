@@ -43,7 +43,7 @@ export default function FeaturedCertifications() {
       <div className="flex justify-center mb-8 overflow-x-auto pb-2">
         <TabsList className="bg-transparent p-0 gap-3">
           {Object.keys(coursesData).map((category) => (
-            <TabsTrigger key={category} value={category} className="rounded-full px-6 py-2.5 bg-gray-100 text-gray-600 hover:bg-gray-200 data-[state=active]:bg-primary data-[state=active]:text-white data-[state=active]:shadow-md transition-all">
+            <TabsTrigger key={category} value={category} className="rounded-full px-6 py-2.5 bg-gray-100 text-gray-600 hover:bg-gray-200 data-[state=active]:bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] data-[state=active]:text-white data-[state=active]:shadow-md transition-all">
               {category}
             </TabsTrigger>
           ))}
@@ -68,9 +68,17 @@ export default function FeaturedCertifications() {
 
                   {/* Content Section */}
                   <div className="p-5 flex flex-col flex-1">
-                    <h3 className="text-[16px] font-bold text-slate-800 leading-snug mb-5 flex-1 group-hover:text-primary transition-colors">
+                    <h3 className="text-[16px] font-bold text-slate-800 leading-snug mb-3 group-hover:text-primary transition-colors">
                       {course.title}
                     </h3>
+                    
+                    {!course.title.includes("AI") && (
+                      <div className="mb-4">
+                        <span className="inline-flex items-center gap-1.5 text-[12px] font-bold text-[#ff9900]">
+                          Integrated with AI
+                        </span>
+                      </div>
+                    )}
 
                     {/* Features List */}
                     <div className="space-y-2.5 mb-6">
@@ -89,7 +97,7 @@ export default function FeaturedCertifications() {
                       <Button variant="outline" className="flex-1 rounded-md text-slate-700 font-semibold border-gray-300 hover:bg-gray-50">
                         View Program
                       </Button>
-                      <Button className="flex-1 rounded-md font-semibold bg-primary hover:bg-primary/90 text-white flex items-center justify-center gap-2">
+                      <Button className="flex-1 rounded-md font-semibold flex items-center justify-center gap-2">
                         <Download className="w-4 h-4" />
                         Syllabus
                       </Button>

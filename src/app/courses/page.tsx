@@ -50,7 +50,7 @@ export default function CoursesPage() {
                     <span>Live Industry Projects</span>
                   </div>
                 </div>
-                <Link href={`/courses/${course.id}`} className="mt-auto inline-flex h-8 w-full items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+                <Link href={`/courses/${course.id}`} className="mt-auto inline-flex h-8 w-full items-center justify-center rounded-lg bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] px-4 text-sm font-medium text-white hover:bg-[linear-gradient(to_right,#ff9900_0%,#ffcc00_100%)]">
                   View Syllabus & Details
                 </Link>
               </CardContent>
