@@ -84,7 +84,7 @@ export default function FeaturedCertifications() {
                     <div className="space-y-2.5 mb-6">
                       <div className="flex items-center gap-2.5 text-[13px] text-gray-600">
                         <GraduationCap className="w-4 h-4 text-gray-400" />
-                        <span>Professional Certificate</span>
+                        <span>Become a certified</span>
                       </div>
                       <div className="flex items-center gap-2.5 text-[13px] text-gray-600">
                         <Clock className="w-4 h-4 text-gray-400" />
@@ -93,13 +93,9 @@ export default function FeaturedCertifications() {
                     </div>
 
                     {/* Buttons Section */}
-                    <div className="flex items-center gap-3 mt-auto">
-                      <Button variant="outline" className="flex-1 rounded-md text-slate-700 font-semibold border-gray-300 hover:bg-gray-50">
+                    <div className="flex items-center mt-auto pt-4">
+                      <Button variant="outline" className="w-full rounded-md text-slate-700 font-semibold border-gray-300 hover:bg-gray-50">
                         View Program
-                      </Button>
-                      <Button className="flex-1 rounded-md font-semibold flex items-center justify-center gap-2">
-                        <Download className="w-4 h-4" />
-                        Syllabus
                       </Button>
                     </div>
                   </div>

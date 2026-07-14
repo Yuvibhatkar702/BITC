@@ -51,16 +51,17 @@ export default function Home() {
           </div>
 
           {/* Right Image/Graphic */}
-          <div className="flex-1 w-full max-w-[600px] lg:max-w-none relative flex justify-center lg:justify-end transform scale-90 sm:scale-85 md:scale-95 lg:scale-90 xl:scale-95 origin-center lg:origin-right mt-12 lg:mt-0">
-            <div className="relative w-full max-w-[540px] aspect-square lg:aspect-[4/3]">
+          <div className="flex-1 w-full relative flex justify-center lg:justify-end mt-12 lg:mt-0">
+            <div className="relative w-full max-w-[600px] lg:max-w-full xl:max-w-[750px] aspect-[4/3] lg:aspect-[16/10]">
               {/* Image */}
-              <div className="w-full h-full rounded-[2rem] sm:rounded-[3rem] overflow-hidden border-[6px] sm:border-[8px] border-white shadow-2xl shadow-primary/10 bg-gray-50 relative">
+              <div className="w-full h-full rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-primary/10 bg-gray-50 relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Professional presenting to a team"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-primary/10 mix-blend-overlay pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent mix-blend-overlay pointer-events-none" />
+                <div className="absolute inset-0 border border-gray-200/50 rounded-[2rem] sm:rounded-[3rem] pointer-events-none" />
               </div>
             </div>
           </div>
@@ -155,16 +156,31 @@ export default function Home() {
 
           {/* Left Content */}
           <div className="flex-1 w-full text-center lg:text-left">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight leading-[1.1]">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-dark mb-4">
               Will <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)]">AI</span> get you <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)]">fired?</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-500 mb-10 max-w-[500px] mx-auto lg:mx-0 leading-relaxed">
               Don't let technology outpace you. At BITC, we solve the AI gap by integrating future-proof skills and hands-on projects into every curriculum—so you become irreplaceable.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-              <Link href="/courses" className="h-14 px-8 rounded-full bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] text-white font-bold flex items-center justify-center hover:bg-[linear-gradient(to_right,#ff9900_0%,#ffcc00_100%)] transition-all shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 text-lg w-full sm:w-auto">
+              <Link href="/courses" className="h-12 px-8 rounded-full bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] text-white font-semibold flex items-center justify-center hover:bg-[linear-gradient(to_right,#ff9900_0%,#ffcc00_100%)] transition-all shadow-lg shadow-orange-500/20 hover:shadow-xl hover:shadow-orange-500/30 hover:-translate-y-0.5 w-full sm:w-auto">
                 Future-Proof Your Career <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
+            </div>
+          </div>
+
+          {/* Right Image/Graphic */}
+          <div className="flex-1 w-full relative flex justify-center lg:justify-end mt-12 lg:mt-0">
+            <div className="relative w-full max-w-[500px] lg:max-w-full xl:max-w-[600px] aspect-[4/3] lg:aspect-[4/3]">
+              <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-orange-500/10 bg-gray-50 relative group">
+                <img
+                  src="/ai-hands.png"
+                  alt="A human hand reaching out towards a robot hand"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-400/10 to-transparent mix-blend-overlay pointer-events-none" />
+                <div className="absolute inset-0 border border-gray-200/50 rounded-[2rem] pointer-events-none" />
+              </div>
             </div>
           </div>
         </div>
@@ -193,7 +209,7 @@ export default function Home() {
           {/* Decorative geometric patterns */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-orange-100/60 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-blue-50/60 rounded-full blur-3xl pointer-events-none" />
-          
+
           <div className="relative z-10 px-6 py-16 md:py-20 md:px-16 flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="max-w-2xl text-center md:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 text-sm font-bold mb-6 shadow-sm">
@@ -206,16 +222,16 @@ export default function Home() {
               <p className="text-lg text-slate-600 leading-relaxed mb-8 font-medium max-w-xl mx-auto md:mx-0">
                 We believe financial constraints should never hold back true talent. Unlock your potential and let us fund your tech career journey.
               </p>
-              
+
               <Link href="/scholarships" className="inline-flex h-14 items-center justify-center rounded-full bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] px-8 text-lg font-extrabold text-white shadow-lg hover:shadow-xl hover:scale-105 hover:shadow-orange-500/20 transition-all duration-300">
                 Check Eligibility Criteria <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
             </div>
-            
+
             <div className="hidden md:flex w-full max-w-[300px] items-center justify-center relative">
-               <div className="w-56 h-56 bg-white/50 backdrop-blur-md border border-orange-100 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(255,153,0,0.15)] relative z-10 hover:scale-105 transition-transform duration-500">
-                  <GraduationCap className="w-28 h-28 text-orange-400 drop-shadow-sm" />
-               </div>
+              <div className="w-56 h-56 bg-white/50 backdrop-blur-md border border-orange-100 rounded-full flex items-center justify-center shadow-[0_0_40px_rgba(255,153,0,0.15)] relative z-10 hover:scale-105 transition-transform duration-500">
+                <GraduationCap className="w-28 h-28 text-orange-400 drop-shadow-sm" />
+              </div>
             </div>
           </div>
         </div>
@@ -241,7 +257,7 @@ export default function Home() {
                 { title: "Live Project", icon: Briefcase },
                 { title: "Internship", icon: Target },
                 { title: "Certification", icon: Award },
-                { title: "Placement", icon: Trophy }
+                { title: "Placement Guidance", icon: Trophy }
               ].map((step, i, arr) => (
                 <div key={i} className="flex flex-col items-center relative w-full md:w-32 group cursor-pointer">
                   <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center border-4 border-gray-100 shadow-sm text-primary mb-4 group-hover:border-primary/30 group-hover:bg-primary/5 group-hover:scale-110 transition-all duration-300 relative z-10">
@@ -309,30 +325,39 @@ export default function Home() {
                 linkedin: "#"
               }
             ].map((faculty, i) => (
-              <Card key={i} className="border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden bg-white group rounded-xl">
-                <div className="h-48 w-full bg-gray-100 relative overflow-hidden">
-                  <img src={faculty.image} alt={faculty.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <CardContent className="p-5">
-                  <h3 className="text-lg font-bold text-slate-900 mb-1">{faculty.name}</h3>
-                  <p className="text-[14px] text-gray-500 mb-6">{faculty.role}</p>
-
-                  <div className="mb-4">
-                    <span className="text-[11px] font-bold text-gray-400 uppercase tracking-widest">WORKING AT</span>
-                    <div className="flex items-center gap-2 mt-1.5">
-                      <Briefcase className="w-4 h-4 text-primary" />
-                      <p className="text-[14px] font-bold text-slate-700">{faculty.company}</p>
+              <Card key={i} className="!p-0 !gap-0 border-0 shadow-xl shadow-gray-200/50 hover:shadow-2xl hover:shadow-primary/10 hover:-translate-y-2 transition-all duration-500 overflow-hidden bg-white group rounded-2xl flex flex-col h-full">
+                {/* Image Section */}
+                <div className="h-[280px] w-full bg-slate-900 relative overflow-hidden shrink-0">
+                  <img src={faculty.image} alt={faculty.name} className="w-full h-full object-cover object-top group-hover:scale-110 group-hover:rotate-1 transition-transform duration-700 opacity-90 group-hover:opacity-100" />
+                  
+                  {/* Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/50 to-transparent opacity-90" />
+                  
+                  {/* Overlay Content */}
+                  <div className="absolute bottom-0 left-0 w-full p-6 flex flex-col justify-end z-10">
+                    <div className="flex items-center gap-2 mb-3 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                      <span className="bg-white/10 backdrop-blur-md text-white border border-white/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-xl">
+                        <Briefcase className="w-3 h-3 text-primary" />
+                        {faculty.company}
+                      </span>
                     </div>
+                    <h3 className="text-xl font-bold text-white mb-1 drop-shadow-md transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500 delay-75">{faculty.name}</h3>
+                    <p className="text-[14px] text-gray-300 font-medium transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500 delay-100">{faculty.role}</p>
                   </div>
+                </div>
 
-                  <p className="text-[14px] text-gray-600 mb-6 leading-relaxed">
-                    {faculty.bio} <span className="font-semibold text-slate-900 cursor-pointer hover:text-primary transition-colors">...Read More</span>
+                {/* Bottom Content (Bio, LinkedIn) */}
+                <div className="p-6 flex flex-col flex-1 bg-white relative">
+                  <div className="w-8 h-1 bg-primary rounded-full mb-5" />
+                  
+                  <p className="text-[14px] text-gray-600 mb-6 leading-relaxed flex-1">
+                    "{faculty.bio}" <span className="font-semibold text-primary cursor-pointer hover:text-primary/80 transition-colors ml-1 text-[13px]">Read More</span>
                   </p>
 
-                  <Link href={faculty.linkedin} className="inline-flex items-center text-primary font-semibold text-[14px] hover:underline">
-                    LinkedIn Profile <ArrowRight className="ml-1.5 h-4 w-4" />
+                  <Link href={faculty.linkedin} className="inline-flex items-center justify-center w-full py-3 px-4 rounded-xl bg-gray-50 text-slate-700 font-bold text-[14px] hover:bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] hover:text-white transition-all duration-300 mt-auto border border-gray-100 shadow-sm group/btn overflow-hidden relative">
+                    <span className="relative z-10 flex items-center">Connect on LinkedIn <ArrowRight className="ml-1.5 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" /></span>
                   </Link>
-                </CardContent>
+                </div>
               </Card>
             ))}
           </div>
@@ -342,7 +367,7 @@ export default function Home() {
       {/* 6.5 Learn Smarter */}
       <section className="py-20 md:py-28 bg-transparent relative overflow-hidden border-t border-gray-100">
         <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
+
           <div className="text-center mb-20">
             <p className="text-gray-500 text-[15px] font-bold uppercase tracking-widest mb-3">Your Path To Career Success Starts With BITC</p>
             <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight">
@@ -352,158 +377,190 @@ export default function Home() {
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
             {/* Left Content */}
-          <div className="flex-1 w-full max-w-xl">
-            <div className="inline-block px-3 py-1.5 rounded bg-slate-900 text-white text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
-              Step 1: Learn smarter
-            </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
-              Learn with <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)]">expert-curated</span> content
-            </h2>
-            <p className="text-lg text-slate-600 mb-10">
-              Build the right skills, the right way.
-            </p>
-            
-            <div className="flex items-center gap-8 mb-10 border-l-4 border-orange-400 pl-6">
-              <div>
-                <div className="text-2xl font-bold text-slate-900">40+</div>
-                <div className="text-sm text-slate-500 font-medium">Hours of learning content</div>
+            <div className="flex-1 w-full max-w-xl">
+              <div className="inline-block px-3 py-1.5 rounded bg-slate-900 text-white text-xs font-bold uppercase tracking-wider mb-6 shadow-sm">
+                Step 1: Learn smarter
               </div>
-              <div className="w-px h-12 bg-gray-200"></div>
-              <div>
-                <div className="text-2xl font-bold text-slate-900">76%</div>
-                <div className="text-sm text-slate-500 font-medium">Learner satisfaction rate</div>
-              </div>
-            </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 leading-tight">
+                Learn with <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)]">expert-curated</span> content
+              </h2>
+              <p className="text-lg text-slate-600 mb-10">
+                Build the right skills, the right way.
+              </p>
 
-            <Link href="/courses" className="inline-flex h-14 items-center justify-center rounded-lg bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] px-10 text-lg font-bold text-white shadow-md shadow-orange-500/10 hover:shadow-lg hover:-translate-y-0.5 transition-all">
-              Start learning
-            </Link>
-          </div>
-
-          {/* Right Content */}
-          <div className="flex-1 w-full relative h-[500px] flex items-center justify-center">
-            {/* Background Graphic */}
-            <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-              <div className="w-[120%] h-40 bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] opacity-10 rounded-full blur-3xl rotate-12"></div>
-            </div>
-
-            {/* Main Image */}
-            <div className="relative w-full max-w-[450px] aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl z-10 bg-slate-100 border border-gray-100">
-              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Team meeting and strategy" className="w-full h-full object-cover" />
-            </div>
-
-            {/* AI Chat Float */}
-            <div className="absolute top-10 -left-4 md:-left-12 bg-white rounded-2xl shadow-xl w-[260px] border border-gray-100 overflow-hidden z-20 animate-in fade-in slide-in-from-left duration-1000">
-              <div className="bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] px-4 py-2 text-white font-bold text-sm flex items-center gap-2">
-                <Sparkles className="w-4 h-4" /> AI chat support
-              </div>
-              <div className="p-4 space-y-4 bg-slate-50/50">
-                <div className="flex gap-2">
-                  <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
-                    <Monitor className="w-3 h-3 text-orange-600" />
-                  </div>
-                  <div className="bg-white border border-gray-100 shadow-sm rounded-xl rounded-tl-sm p-2 text-[11px] text-slate-700 w-full">
-                    Hi there! Got a doubt? I'm here to help!
-                  </div>
+              <div className="flex items-center gap-8 mb-10 border-l-4 border-orange-400 pl-6">
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">40+</div>
+                  <div className="text-sm text-slate-500 font-medium">Hours of learning content</div>
                 </div>
-                <div className="flex gap-2 flex-row-reverse">
-                  <div className="w-6 h-6 rounded-full bg-slate-200 overflow-hidden shrink-0">
-                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=50&h=50&q=80" alt="User" />
-                  </div>
-                  <div className="bg-slate-800 text-white rounded-xl rounded-tr-sm p-2 text-[11px] w-[85%]">
-                    Hi, I'm struggling to understand a concept in my certification program. Can you help?
-                  </div>
+                <div className="w-px h-12 bg-gray-200"></div>
+                <div>
+                  <div className="text-2xl font-bold text-slate-900">76%</div>
+                  <div className="text-sm text-slate-500 font-medium">Learner satisfaction rate</div>
                 </div>
               </div>
-              <div className="px-3 py-2 border-t border-gray-100 text-[10px] text-gray-400 flex justify-between items-center bg-white">
-                Type your message here... <div className="w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center">?</div>
-              </div>
+
+              <Link href="/courses" className="inline-flex h-14 items-center justify-center rounded-lg bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] px-10 text-lg font-bold text-white shadow-md shadow-orange-500/10 hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                Start learning
+              </Link>
             </div>
 
-            {/* Peer Discussions Float */}
-            <div className="absolute bottom-20 -right-4 md:-right-10 bg-white rounded-2xl shadow-xl w-[240px] border border-gray-100 overflow-hidden z-20 animate-in fade-in slide-in-from-right duration-1000 delay-200">
-              <div className="bg-slate-900 px-4 py-2 text-white font-bold text-sm flex items-center gap-2">
-                <Users className="w-4 h-4" /> Peer discussions
+            {/* Right Content */}
+            <div className="flex-1 w-full relative h-[500px] flex items-center justify-center">
+              {/* Background Graphic */}
+              <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+                <div className="w-[120%] h-40 bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] opacity-10 rounded-full blur-3xl rotate-12"></div>
               </div>
-              <div className="p-3 space-y-3 bg-white">
-                <div className="flex gap-2">
-                  <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=50&h=50&q=80" alt="User" className="w-6 h-6 rounded-full shrink-0" />
-                  <div className="bg-gray-50 border border-gray-100 rounded-xl rounded-tl-sm p-2 text-[11px] text-slate-700">
-                    Hey! How did you approach the assignment?
-                  </div>
-                </div>
-                <div className="flex gap-2 flex-row-reverse">
-                  <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=50&h=50&q=80" alt="User" className="w-6 h-6 rounded-full shrink-0" />
-                  <div className="bg-orange-50 border border-orange-100 rounded-xl rounded-tr-sm p-2 text-[11px] text-slate-800">
-                    I started with handling missing data!
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Live Session Pill */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] text-white px-5 py-2.5 rounded-full font-bold text-[13px] shadow-lg flex items-center gap-2 z-30 animate-pulse border border-white/20">
-               <div className="w-2 h-2 rounded-full bg-white"></div>
-               live & recorded session
+              {/* Main Image */}
+              <div className="relative w-full max-w-[450px] aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl z-10 bg-slate-100 border border-gray-100">
+                <img src="https://unsplash.com/photos/man-standing-in-front-of-people-sitting-beside-table-with-laptop-computers-gMsnXqILjp4" alt="Team meeting with sticky notes" className="w-full h-full object-cover" />
+              </div>
+
+              {/* AI Chat Float */}
+              <div className="absolute top-10 -left-4 md:-left-12 bg-white rounded-2xl shadow-xl w-[260px] border border-gray-100 overflow-hidden z-20 animate-in fade-in slide-in-from-left duration-1000">
+                <div className="bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] px-4 py-2 text-white font-bold text-sm flex items-center gap-2">
+                  <Sparkles className="w-4 h-4" /> AI chat support
+                </div>
+                <div className="p-4 space-y-4 bg-slate-50/50">
+                  <div className="flex gap-2">
+                    <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center shrink-0">
+                      <Monitor className="w-3 h-3 text-orange-600" />
+                    </div>
+                    <div className="bg-white border border-gray-100 shadow-sm rounded-xl rounded-tl-sm p-2 text-[11px] text-slate-700 w-full">
+                      Hi there! Got a doubt? I'm here to help!
+                    </div>
+                  </div>
+                  <div className="flex gap-2 flex-row-reverse">
+                    <div className="w-6 h-6 rounded-full bg-slate-200 overflow-hidden shrink-0">
+                      <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=50&h=50&q=80" alt="User" />
+                    </div>
+                    <div className="bg-slate-800 text-white rounded-xl rounded-tr-sm p-2 text-[11px] w-[85%]">
+                      Hi, I'm struggling to understand a concept in my certification program. Can you help?
+                    </div>
+                  </div>
+                </div>
+                <div className="px-3 py-2 border-t border-gray-100 text-[10px] text-gray-400 flex justify-between items-center bg-white">
+                  Type your message here... <div className="w-4 h-4 border border-gray-300 rounded-full flex items-center justify-center">?</div>
+                </div>
+              </div>
+
+              {/* Peer Discussions Float */}
+              <div className="absolute bottom-20 -right-4 md:-right-10 bg-white rounded-2xl shadow-xl w-[240px] border border-gray-100 overflow-hidden z-20 animate-in fade-in slide-in-from-right duration-1000 delay-200">
+                <div className="bg-slate-900 px-4 py-2 text-white font-bold text-sm flex items-center gap-2">
+                  <Users className="w-4 h-4" /> Peer discussions
+                </div>
+                <div className="p-3 space-y-3 bg-white">
+                  <div className="flex gap-2">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=50&h=50&q=80" alt="User" className="w-6 h-6 rounded-full shrink-0" />
+                    <div className="bg-gray-50 border border-gray-100 rounded-xl rounded-tl-sm p-2 text-[11px] text-slate-700">
+                      Hey! How did you approach the assignment?
+                    </div>
+                  </div>
+                  <div className="flex gap-2 flex-row-reverse">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=50&h=50&q=80" alt="User" className="w-6 h-6 rounded-full shrink-0" />
+                    <div className="bg-orange-50 border border-orange-100 rounded-xl rounded-tr-sm p-2 text-[11px] text-slate-800">
+                      I started with handling missing data!
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Live Session Pill */}
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] text-white px-5 py-2.5 rounded-full font-bold text-[13px] shadow-lg flex items-center gap-2 z-30 animate-pulse border border-white/20">
+                <div className="w-2 h-2 rounded-full bg-white"></div>
+                live & recorded session
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </section>
 
-      {/* 7. Placement Assistance */}
-      <section className="py-12 md:py-16 bg-white border-b border-gray-100">
-        <div className="container max-w-[1400px] mx-auto px-4">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-dark mb-2">100% Placement Assistance</h2>
-            <p className="text-gray-500 text-[15px] max-w-2xl mx-auto">Our dedicated placement cell ensures you get the right launchpad for your career.</p>
+      <section className="py-16 md:py-24 bg-transparent relative overflow-hidden">
+        {/* Decorative background elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute -top-[30%] -right-[10%] w-[60%] h-[60%] rounded-full bg-primary/5 blur-[120px]"></div>
+          <div className="absolute -bottom-[30%] -left-[10%] w-[60%] h-[60%] rounded-full bg-blue-500/5 blur-[120px]"></div>
+        </div>
+        
+        <div className="container max-w-[1400px] mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              100% <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)]">Placement Assistance</span>
+            </h2>
+            <p className="text-gray-500 text-[16px] max-w-2xl mx-auto">Our dedicated placement cell ensures you get the right launchpad for your career.</p>
           </div>
+          
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-              <div className="text-2xl md:text-3xl font-black text-primary mb-1">10+</div>
-              <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Hiring Partners</div>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-              <div className="text-2xl md:text-3xl font-black text-primary mb-1">1K+</div>
-              <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Students Placed</div>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-              <div className="text-2xl md:text-3xl font-black text-primary mb-1">12 LPA</div>
-              <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Highest Package</div>
-            </div>
-            <div className="p-6 bg-gray-50 rounded-xl border border-gray-100">
-              <div className="text-2xl md:text-3xl font-black text-primary mb-1">95%</div>
-              <div className="text-[13px] font-semibold text-gray-600 uppercase tracking-wide">Placement Rate</div>
-            </div>
+            {[
+              { stat: "10+", label: "Hiring Partners" },
+              { stat: "1K+", label: "Students Placed" },
+              { stat: "12 LPA", label: "Highest Package" },
+              { stat: "95%", label: "Placement Rate" }
+            ].map((item, index) => (
+              <div key={index} className="p-8 bg-white/40 backdrop-blur-md rounded-2xl border border-gray-100 hover:border-primary/50 hover:bg-white transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10 group">
+                <div className="text-4xl md:text-5xl font-black mb-3 transform group-hover:scale-110 transition-transform duration-500">
+                  <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)]">
+                    {item.stat}
+                  </span>
+                </div>
+                <div className="text-[13px] font-bold text-gray-600 uppercase tracking-widest">{item.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* 8. Student Success Stories */}
-      <section className="py-12 md:py-16 bg-white">
-        <div className="container max-w-[1400px] mx-auto px-4">
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-dark mb-2">Student Success Stories</h2>
-            <p className="text-gray-500 text-[15px]">Hear from our alumni who are now working at top tech companies.</p>
+      <section className="py-20 md:py-28 bg-gray-50 relative overflow-hidden">
+        <div className="container max-w-[1400px] mx-auto px-4 relative z-10">
+          <div className="mb-16 text-center">
+            <p className="text-primary font-bold uppercase tracking-widest text-[14px] mb-3">Testimonials</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Student <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)]">Success Stories</span>
+            </h2>
+            <p className="text-gray-500 text-[16px] max-w-2xl mx-auto">Hear from our alumni who are now working at top tech companies.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { name: "Rahul Sharma", role: "Software Engineer at TCS", quote: "The MERN stack certification at BITC gave me the practical skills I needed to clear my interviews with ease.", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=150&h=150&q=80" },
               { name: "Priya Patel", role: "Data Analyst at Wipro", quote: "Excellent faculty and hands-on projects. The placement cell was very supportive throughout the process.", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80" },
               { name: "Amit Kumar", role: "Automation Engineer at L&T", quote: "The industrial automation training was exactly what the industry demands right now.", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80" }
             ].map((story, i) => (
-              <Card key={i} className="border-gray-200 bg-white">
-                <CardContent className="p-6">
-                  <div className="flex text-amber-400 mb-3">
-                    {[1, 2, 3, 4, 5].map(s => <Star key={s} className="h-4 w-4 fill-current" />)}
-                  </div>
-                  <p className="text-gray-600 text-[14px] italic mb-5 leading-relaxed">"{story.quote}"</p>
-                  <div className="flex items-center gap-3">
-                    <img src={story.image} alt={story.name} className="w-10 h-10 rounded-full object-cover border border-gray-200" />
-                    <div>
-                      <h4 className="font-bold text-slate-dark text-[15px]">{story.name}</h4>
-                      <p className="text-[13px] text-primary font-semibold">{story.role}</p>
+              <Card key={i} className="!p-0 !gap-0 border-0 shadow-xl shadow-gray-200/40 bg-white rounded-2xl relative overflow-hidden h-full flex flex-col">
+                <div className="absolute -top-4 right-4 text-[120px] font-serif leading-none text-gray-100 pointer-events-none select-none">
+                  "
+                </div>
+                
+                <CardContent className="p-6 flex flex-col flex-1 relative z-10">
+                  {/* First: Image and Name */}
+                  <div className="flex items-center gap-4 mb-5">
+                    <div className="relative">
+                      <img src={story.image} alt={story.name} className="w-12 h-12 rounded-full object-cover relative z-10 border-2 border-white shadow-md" />
                     </div>
+                    <div>
+                      <h4 className="font-bold text-slate-900 text-[15px]">{story.name}</h4>
+                      <p className="text-[12px] text-gray-500 font-semibold">{story.role}</p>
+                    </div>
+                  </div>
+                  
+                  {/* Then: Description */}
+                  <p className="text-slate-700 text-[14px] italic mb-6 leading-relaxed flex-1 relative z-10 font-medium">
+                    "{story.quote}"
+                  </p>
+                  
+                  {/* Then: Stars */}
+                  <div className="flex items-center text-amber-400 mt-auto pt-4 border-t border-gray-100">
+                    <svg className="w-5 h-5 mr-3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                      <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                      <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
+                      <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                    </svg>
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} className="h-4 w-4 fill-current mr-1" />
+                    ))}
                   </div>
                 </CardContent>
               </Card>
@@ -515,7 +572,7 @@ export default function Home() {
       <section className="py-20 md:py-28 bg-transparent relative overflow-hidden">
         {/* Subtle background glow */}
         <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[800px] h-[800px] opacity-20 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-500/10 via-transparent to-transparent pointer-events-none" />
-        
+
         <div className="container max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row items-center justify-between gap-16">
           {/* Left Content */}
           <div className="flex-1 w-full max-w-2xl">
@@ -541,9 +598,9 @@ export default function Home() {
             <div className="relative w-full max-w-[600px] rounded-3xl overflow-hidden shadow-2xl">
               {/* Image */}
               <div className="aspect-[4/3] w-full bg-slate-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" 
-                  alt="Workforce professionals collaborating" 
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+                  alt="Workforce professionals collaborating"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -558,9 +615,9 @@ export default function Home() {
 
               {/* Bottom Right Logo overlay */}
               <div className="absolute bottom-6 right-6">
-                 <div className="font-bold text-2xl text-white drop-shadow-md flex items-center">
-                   BITC <span className="ml-1 text-xs font-medium px-2 py-0.5 border border-white/40 rounded bg-black/20 backdrop-blur-sm">ENTERPRISE</span>
-                 </div>
+                <div className="font-bold text-2xl text-white drop-shadow-md flex items-center">
+                  BITC <span className="ml-1 text-xs font-medium px-2 py-0.5 border border-white/40 rounded bg-black/20 backdrop-blur-sm">ENTERPRISE</span>
+                </div>
               </div>
             </div>
           </div>
