@@ -19,16 +19,16 @@ export default function Home() {
 
           {/* Left Content */}
           <div className="flex-1 w-full">
-            <h1 className="text-4xl md:text-5xl lg:text-[54px] font-extrabold tracking-tight mb-6 text-slate-900 leading-[1.1]">
-              Master tomorrow's <br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">skills today.</span>
+            <h1 className="text-4xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 leading-[1.1]">
+              Learn from Industry Experts. <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Become an Industry Expert.</span>
             </h1>
 
-            <p className="text-lg text-gray-600 mb-8 max-w-[500px] leading-relaxed">
-              Excel with BITC's top upskilling platform. Join thousands of learners globally, earn recognized certificates, and get 100% placement assistance.
+            <p className="text-base md:text-lg text-gray-600 mb-6 max-w-[540px] leading-relaxed">
+              At BITC, you learn directly from experienced professionals, collaborate on live projects, gain real industry exposure, earn recognized certifications, and build the confidence to launch a successful career.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 mb-10">
+            <div className="flex flex-wrap items-center gap-4 mb-6">
               <Link href="/courses" className="h-12 px-8 rounded-full bg-[linear-gradient(to_right,#ffcc00_0%,#ff9900_100%)] text-white font-semibold flex items-center justify-center hover:bg-[linear-gradient(to_right,#ff9900_0%,#ffcc00_100%)] transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5">
                 Explore Programs
               </Link>
@@ -38,8 +38,8 @@ export default function Home() {
             </div>
 
             {/* Goals */}
-            <div className="mt-8 md:mt-16">
-              <p className="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wider">Popular Goals</p>
+            <div className="mt-6 md:mt-10">
+              <p className="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">Popular Goals</p>
               <div className="flex flex-wrap gap-2.5">
                 {["IT Certifications", "Data Science", "Management", "Internship"].map((goal, i) => (
                   <Link key={i} href="#" className="px-4 py-2 rounded-full border border-gray-200 text-[13px] font-medium text-gray-600 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all bg-white shadow-sm hover:shadow-md">
