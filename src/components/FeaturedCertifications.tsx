@@ -94,7 +94,7 @@ export default function FeaturedCertifications() {
 
                     {/* Buttons Section */}
                     <div className="flex items-center mt-auto pt-4">
-                      <Button variant="outline" className="w-full rounded-md text-slate-700 font-semibold border-gray-300 hover:bg-gray-50">
+                      <Button variant="outline" className="w-full rounded-md text-slate-700 font-semibold border-gray-300 hover:bg-orange-500 hover:text-white hover:border-orange-500 cursor-pointer transition-colors duration-300">
                         View Program
                       </Button>
                     </div>
