@@ -43,10 +43,15 @@ export function Navbar() {
             <div className="absolute top-[75px] left-1/2 -translate-x-1/2 hidden group-hover:block w-[280px] bg-white border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] rounded-2xl p-3 z-50 transition-all opacity-0 group-hover:opacity-100 animate-in fade-in slide-in-from-top-4 duration-300">
               {[
                 { href: "/about", icon: Building2, title: "About BITC", desc: "Who we are" },
+                { href: "/about/our-story", icon: BookOpen, title: "Our Story", desc: "Our journey so far" },
                 { href: "/about/vision-mission", icon: Compass, title: "Vision & Mission", desc: "Our core purpose" },
                 { href: "/about/directors-message", icon: MessageSquare, title: "Director's Message", desc: "Words from leadership" },
-                { href: "/about/why-choose-us", icon: CheckCircle, title: "Why Choose BITC", desc: "What sets us apart" },
-                { href: "/about/infrastructure", icon: Network, title: "Infrastructure", desc: "Our facilities" },
+
+                { href: "/about/our-infrastructure", icon: Network, title: "Our Infrastructure", desc: "Our facilities" },
+                { href: "/about/industry-partnerships", icon: Handshake, title: "Industry Partnerships", desc: "Our collaborations" },
+                { href: "/about/our-mentors", icon: Users, title: "Our Mentors", desc: "Learn from the best" },
+                { href: "/about/awards-recognition", icon: Trophy, title: "Awards & Recognition", desc: "Our achievements" },
+                { href: "/about/careers", icon: Briefcase, title: "Careers", desc: "Join our team" },
               ].map((item, i) => (
                 <Link key={i} href={item.href} className="flex items-center gap-2.5 p-2 rounded-xl hover:bg-gray-50 transition-colors group/link">
                   <div className="w-8 h-8 rounded-md bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover/link:bg-primary group-hover/link:text-white transition-colors">

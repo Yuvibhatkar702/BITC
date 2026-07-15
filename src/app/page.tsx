@@ -11,7 +11,7 @@ export default function Home() {
 
 
       {/* 1. Hero Section */}
-      <section className="relative w-full bg-white pt-12 pb-16 md:pt-20 md:pb-24 overflow-hidden">
+      <section className="relative w-full bg-white py-8 lg:py-0 overflow-hidden min-h-[calc(100vh-140px)] flex items-center justify-center">
         {/* Subtle background glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] opacity-30 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent pointer-events-none" />
 
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
 
             {/* Goals */}
-            <div>
+            <div className="mt-8 md:mt-16">
               <p className="text-sm font-semibold text-gray-500 mb-4 uppercase tracking-wider">Popular Goals</p>
               <div className="flex flex-wrap gap-2.5">
                 {["IT Certifications", "Data Science", "Management", "Internship"].map((goal, i) => (
@@ -171,15 +171,13 @@ export default function Home() {
 
           {/* Right Image/Graphic */}
           <div className="flex-1 w-full relative flex justify-center lg:justify-end mt-12 lg:mt-0">
-            <div className="relative w-full max-w-[500px] lg:max-w-full xl:max-w-[600px] aspect-video">
-              <div className="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-orange-500/10 bg-white relative group">
+            <div className="relative w-full max-w-[2000px] lg:max-w-[110%] xl:max-w-[1000px] aspect-video">
+              <div className="w-full h-full relative group flex items-center justify-center">
                 <img
                   src="/ai-hands.png"
                   alt="A human hand reaching out towards a robot hand"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-contain mix-blend-multiply scale-[1.5] md:scale-[1.8] lg:scale-[2] xl:scale-[2.2]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-400/10 to-transparent mix-blend-overlay pointer-events-none" />
-                <div className="absolute inset-0 border border-gray-200/50 rounded-[2rem] pointer-events-none" />
               </div>
             </div>
           </div>
@@ -228,9 +226,9 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="hidden md:flex w-full max-w-[350px] items-center justify-center relative">
-              <div className="w-full h-[320px] rounded-3xl overflow-hidden shadow-2xl shadow-orange-500/10 relative z-10 hover:-translate-y-2 transition-transform duration-500">
-                <img src="https://images.unsplash.com/photo-1676054862796-161e79695562?q=80&w=698&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Student in graduation gown" className="w-full h-full object-cover object-bottom" />
+            <div className="hidden md:flex w-full max-w-[500px] items-center justify-center relative">
+              <div className="w-full h-[450px] relative z-10 hover:-translate-y-2 transition-transform duration-500">
+                <img src="/student-grad-nobg.png" alt="Student in graduation gown" className="w-full h-full object-contain scale-[1.15]" />
               </div>
             </div>
           </div>
