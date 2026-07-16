@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "BITC - BIZONANCE Industrial Training Centre",
-  description: "Premium industry-oriented training institute offering courses in Full Stack, Data Science, AI, and more.",
+  description: "Premium industry-oriented Training Center offering courses in Full Stack, Data Science, AI, and more.",
 };
 
 export default function RootLayout({

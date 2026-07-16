@@ -38,10 +38,10 @@ export default function Home() {
             </div>
 
             {/* Goals */}
-            <div className="mt-6 md:mt-10">
+            <div className="mt-12 md:mt-16">
               <p className="text-sm font-semibold text-gray-500 mb-3 uppercase tracking-wider">Popular Goals</p>
               <div className="flex flex-wrap gap-2.5">
-                {["IT Certifications", "Data Science", "Management", "Internship"].map((goal, i) => (
+                {["Get Placed", "Become Industry Ready", "Build a Portfolio", "Learn from Experts"].map((goal, i) => (
                   <Link key={i} href="#" className="px-4 py-2 rounded-full border border-gray-200 text-[13px] font-medium text-gray-600 hover:border-primary hover:text-primary hover:bg-primary/5 transition-all bg-white shadow-sm hover:shadow-md">
                     {goal}
                   </Link>
