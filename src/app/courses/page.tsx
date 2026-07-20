@@ -7,7 +7,6 @@ const courses = [
   { id: "full-stack", title: "Full Stack Development (MERN)", cat: "Information Technology", duration: "6 Months", fees: "Contact Us" },
   { id: "data-science", title: "Data Science & Machine Learning", cat: "Information Technology", duration: "6 Months", fees: "Contact Us" },
   { id: "cloud-computing", title: "Cloud Computing (AWS/Azure)", cat: "Information Technology", duration: "3 Months", fees: "Contact Us" },
-  { id: "industrial-automation", title: "Industrial Automation (PLC & SCADA)", cat: "Engineering", duration: "3 Months", fees: "Contact Us" },
   { id: "digital-marketing", title: "Advanced Digital Marketing", cat: "Management", duration: "3 Months", fees: "Contact Us" },
   { id: "ui-ux", title: "UI/UX & Product Design", cat: "Designing", duration: "3 Months", fees: "Contact Us" },
 ];

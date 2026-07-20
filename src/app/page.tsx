@@ -11,14 +11,14 @@ export default function Home() {
 
 
       {/* 1. Hero Section */}
-      <section className="relative w-full bg-white py-8 lg:py-0 overflow-hidden min-h-[calc(100vh-140px)] flex items-center justify-center">
+      <section className="relative w-full bg-white py-8 lg:py-0 overflow-hidden min-h-[calc(100vh-80px)] flex items-center justify-center">
         {/* Subtle background glow */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] opacity-30 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent pointer-events-none" />
 
         <div className="container max-w-[1400px] mx-auto px-4 flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative z-10">
 
           {/* Left Content */}
-          <div className="flex-1 w-full">
+          <div className="flex-1 w-full pt-8 lg:pt-16">
             <h1 className="text-4xl lg:text-4xl xl:text-5xl font-extrabold tracking-tight mb-4 text-slate-900 leading-[1.1]">
               Learn from Industry Experts. <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Become an Industry Expert.</span>

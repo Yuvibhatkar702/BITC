@@ -74,7 +74,6 @@ export function Navbar() {
             <div className="absolute top-[75px] left-1/2 -translate-x-1/2 hidden group-hover:block w-[280px] bg-white border border-gray-100 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] rounded-2xl p-3 z-50 transition-all opacity-0 group-hover:opacity-100 animate-in fade-in slide-in-from-top-4 duration-300">
               {[
                 { href: "/courses/it", icon: Monitor, title: "IT Courses", desc: "Software, Data & Cloud" },
-                { href: "/courses/engineering", icon: Cpu, title: "Engineering", desc: "Core & Advanced Tech" },
                 { href: "/courses/management", icon: LineChart, title: "Management", desc: "Business & Strategy" },
                 { href: "/courses/design", icon: PenTool, title: "Design Courses", desc: "UI/UX & Graphics" },
               ].map((item, i) => (
@@ -88,11 +87,7 @@ export function Navbar() {
                   </div>
                 </Link>
               ))}
-              <div className="mt-2 pt-2 border-t border-gray-100 px-2">
-                <Link href="/courses" className="text-[13px] font-bold text-primary hover:text-primary/80 flex items-center">
-                  View all courses <ArrowRight className="w-3.5 h-3.5 ml-1" />
-                </Link>
-              </div>
+
             </div>
           </div>
 

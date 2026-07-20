@@ -1,19 +1,19 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Users, 
-  Code, 
-  Building2, 
-  TrendingUp, 
-  Award, 
-  Briefcase, 
-  GraduationCap, 
-  Trophy, 
-  Sparkles, 
-  Shield, 
-  Network, 
-  BookOpen, 
+import {
+  Users,
+  Code,
+  Building2,
+  TrendingUp,
+  Award,
+  Briefcase,
+  GraduationCap,
+  Trophy,
+  Sparkles,
+  Shield,
+  Network,
+  BookOpen,
   ArrowRight,
   CheckCircle2
 } from "lucide-react";
@@ -21,7 +21,7 @@ import {
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen text-[15px]">
-      
+
       {/* 1. Hero Section */}
       <section className="relative w-full bg-white py-16 lg:py-24 overflow-hidden flex items-center justify-center border-b border-gray-100">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] opacity-30 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent pointer-events-none" />
@@ -55,9 +55,9 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop" 
-                  alt="Team collaboration" 
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1170&auto=format&fit=crop"
+                  alt="Team collaboration"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay" />
@@ -74,7 +74,7 @@ export default function AboutPage() {
           <p className="text-lg text-gray-600 mb-12 max-w-[700px] mx-auto">
             At BITC, learning extends far beyond textbooks. We believe students learn best by engaging directly with the industry.
           </p>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-left max-w-[900px] mx-auto">
             {[
               "Working on real projects",
@@ -90,7 +90,7 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-          
+
           <p className="mt-12 text-xl font-semibold text-slate-900">
             Our goal is not simply to help students complete a course—but to prepare them for successful careers.
           </p>
@@ -165,11 +165,11 @@ export default function AboutPage() {
       <section className="py-16 md:py-24 bg-gray-50 border-y border-gray-100">
         <div className="container max-w-[1000px] mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12">The BITC Learning Journey</h2>
-          
+
           <div className="relative">
             {/* Connecting Line */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/20 via-primary to-primary/20 -translate-x-1/2" />
-            
+
             <div className="space-y-6 md:space-y-0">
               {[
                 "Meet Industry Experts",
@@ -188,12 +188,12 @@ export default function AboutPage() {
                       {step}
                     </div>
                   </div>
-                  
+
                   <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg z-10 shadow-lg shadow-primary/30 relative">
                     {i + 1}
                     {i !== 8 && <div className="md:hidden absolute top-12 bottom-[-24px] w-1 bg-primary/20" />}
                   </div>
-                  
+
                   <div className={`md:hidden w-full max-w-[250px] text-center`}>
                     <div className="text-lg font-bold text-slate-800 bg-white px-4 py-3 rounded-xl shadow-sm border border-gray-100">
                       {step}
@@ -256,7 +256,7 @@ export default function AboutPage() {
                 ))}
               </div>
             </div>
-            
+
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Commitment</h2>
               <div className="bg-white/5 border border-white/10 rounded-[2rem] p-8 md:p-10 backdrop-blur-sm">
